@@ -1,3 +1,5 @@
+![build status](https://api.travis-ci.com/vasiliykarasev/tfcontracts.svg?branch=main)
+
 tfcontracts
 ========================
 

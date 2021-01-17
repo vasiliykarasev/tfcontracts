@@ -1,8 +1,16 @@
+notifications:
+  email: false
 language: python
 python:
   - "3.8"
+before_install:
+  - pip install codecov
+  - pip install pytest-cov
 install:
   - pip install -r requirements.txt
 script:
   - pytype
   - pytest
+after_success:
+  - pytest --cov=./
+  - bash <(curl -s https://codecov.io/bash)
