@@ -1,4 +1,4 @@
-![build status](https://api.travis-ci.com/vasiliykarasev/tfcontracts.svg?branch=main)
+[![build status](https://api.travis-ci.com/vasiliykarasev/tfcontracts.svg?branch=main)](https://travis-ci.com/github/vasiliykarasev/tfcontracts)
 [![codecov](https://codecov.io/gh/vasiliykarasev/tfcontracts/branch/main/graph/badge.svg)](https://codecov.io/gh/vasiliykarasev/tfcontracts)
 
 tfcontracts
