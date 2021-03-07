@@ -6,10 +6,11 @@ python:
 before_install:
   - pip install codecov
   - pip install pytest-cov
+  - pip install yapf
 install:
   - pip install -r requirements.txt
 script:
-  - yapf --diff --recursive . || exit; else echo skip; fi
+  - yapf --diff --recursive tfcontracts/ tests/
   - pytype
   - pytest
 after_success:

@@ -1,6 +1,9 @@
 import inspect
-from typing import Any, Dict, List, Mapping, Sequence
 import tensorflow as tf
+
+from typing import Any, Dict, List, Mapping, Sequence
+
+from . import errors
 
 
 def get_function_args_as_dict(func, *args, **kwargs):
@@ -66,10 +69,9 @@ def _flatten_func_args_recursively(value: Any) -> Sequence[tf.Tensor]:
     return []
 
 
-def check_contract_args_match_function_args(
-    contract_arg_names: Sequence[str],
-    function_arg_names: Sequence[str],
-    function_name: str) -> None:
+def check_contract_args_match_function_args(contract_arg_names: Sequence[str],
+                                            function_arg_names: Sequence[str],
+                                            function_name: str) -> None:
   """Ensures that contract_arg_names is a subset of function_arg_names.
 
   Args:

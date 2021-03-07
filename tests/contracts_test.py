@@ -82,6 +82,19 @@ class DTypeContractTest(unittest.TestCase):
     self.assertTrue(check_argument_dtype_recursive(924, tf.int32))
 
 
+class ShapeContractTest(unittest.TestCase):
+  def tests_single_shape_contract(self):
+    """Verify that a simple shape contract works as expected."""
+    @tfcontracts.ShapeContract(values={'x': [10], 'y': [10], 'return': []})
+    def add_two_tensors_and_sum(x, y):
+      return tf.reduce_sum(x + y)
+
+    add_two_tensors_and_sum(tf.zeros([10]), tf.zeros([10]))
+
+    with self.assertRaises(tfcontracts.errors.InvalidArgumentError):
+      add_two_tensors_and_sum(tf.zeros([5]), tf.zeros([10]))
+
+
 class CombinedContractTest(unittest.TestCase):
   def test_combined_contract(self):
     # A CombinedContract that has no contracts provided to the ctor is valid,
