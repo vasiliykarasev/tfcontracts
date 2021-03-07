@@ -6,6 +6,7 @@ from . import errors
 from . import contract
 from . import common
 
+
 class TypeCheckingContract(contract.FunctionContract):
   """A contract that type-checks annotations against values.
 
@@ -15,7 +16,8 @@ class TypeCheckingContract(contract.FunctionContract):
                          **kwargs) -> None:
     argspec = inspect.getfullargspec(func)
     # Map function arguments to a dict.
-    func_args_as_dict = common.bind_function_args(argspec.args, *args, **kwargs)
+    func_args_as_dict = common.bind_function_args(argspec.args, *args,
+                                                  **kwargs)
     check_argument_types(func_args_as_dict, argspec.annotations, func.__name__)
 
   def check_postcondition(self, func_results: Any,

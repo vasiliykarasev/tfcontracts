@@ -13,7 +13,6 @@ CombinedContract = combined_contract.CombinedContract
 # Cannot be used directly, but users may wish to derive from this.
 FunctionContract = contract.FunctionContract
 
-
 # Utilities.
 assert_shapes_same = assert_utilities.assert_shapes_same
 assert_in_interval = assert_utilities.assert_in_interval

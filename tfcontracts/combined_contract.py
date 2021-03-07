@@ -2,6 +2,7 @@ from . import contract
 
 from typing import Any, Callable, Sequence
 
+
 class CombinedContract(contract.FunctionContract):
   """A contract that internally represents and enforces a contract collection.
 

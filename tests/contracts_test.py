@@ -5,7 +5,7 @@ except:
   pass
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] =''
+os.environ['CUDA_VISIBLE_DEVICES'] = ''
 
 import tfcontracts
 import unittest
@@ -91,6 +91,7 @@ class CombinedContractTest(unittest.TestCase):
       return x + y
 
     self.assertEqual(3, test_func(1, 2))
+
 
 if __name__ == '__main__':
   unittest.main()
