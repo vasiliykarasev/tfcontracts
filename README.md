@@ -15,7 +15,7 @@ Roughly speaking, the intention is to provide the following:
 - Focus on verifying function pre-conditions and post-conditions.
 - Validation of input values.
 
-The library is inspired by [tfcontracts](https://andreacensi.github.io/contracts/) and is an attempt to make python more rigid.
+The library is inspired by [pycontracts](https://andreacensi.github.io/contracts/) and is an attempt to make python more rigid.
 
 ## Contact
 
